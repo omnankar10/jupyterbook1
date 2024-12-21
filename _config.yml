@@ -1,0 +1,38 @@
+title: "EAS-503 Final Project"
+author: "Om Nankar"
+
+# Configure notebook execution
+execute:
+  execute_notebooks: "off"  # Skip execution for embedded notebooks
+
+# HTML build configuration
+html:
+  theme: "sphinx_book_theme"
+  baseurl: "https://omnankar10.github.io/my-jupyterbook/"  # Ensure correct base URL for GitHub Pages
+
+# Enable launch buttons for notebooks
+launch_buttons:
+  notebook_interface: "jupyterlab"
+  colab_url: "https://colab.research.google.com/"
+  thebe: true
+
+# Thebe configuration for interactive features
+thebe_config:
+  requestKernel: true
+  binderOptions:
+    repo: "omnankar10/my-jupyterbook"  # Ensure correct Binder repository URL
+    ref: "gh-pages"  # Reference the branch hosting the book
+
+# Repository configuration for GitHub Pages deployment
+repository:
+  url: https://github.com/omnankar10/my-jupyterbook
+  path_to_book: _build/html
+  branch: gh-pages
+
+# Additional settings for better compatibility
+sitemap:
+  format: "html"  # Include sitemap for better indexing
+  changefreq: "weekly"
+
+# Ensure clean build during deployment
+clean: true
